@@ -1,5 +1,5 @@
 var tlist = [];
-                $.getJSON("http://localhost:8080/board/wordcloud", function(hlist){
+                $.getJSON("http://192.168.0.36:8080/board/wordcloud", function(hlist){
             console.log("start ccc");
                     $(hlist).each(function(index){
                         console.log(hlist[index][0]);
