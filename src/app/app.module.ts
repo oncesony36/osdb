@@ -18,6 +18,7 @@ import { CultureCarouselComponent } from './carousel/culture-carousel/culture-ca
 import { MeetingCarouselComponent } from './carousel/meeting-carousel/meeting-carousel.component';
 import { UsersComponent } from './users/users.component';
 import { UserRegistComponent } from './users/user-regist/user-regist.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UserRegistComponent } from './users/user-regist/user-regist.component';
     CultureCarouselComponent,
     MeetingCarouselComponent,
     UsersComponent,
-    UserRegistComponent
+    UserRegistComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
