@@ -4,7 +4,7 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { router } from "./app.router";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+// import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +24,9 @@ import { UserRegistComponent } from './users/user-regist/user-regist.component';
 import { HomeComponent } from './home/home.component';
 import { UserReadComponent } from './users/user-read/user-read.component';
 import { UserModifyComponent } from './users/user-modify/user-modify.component';
+import { RooftoplistComponent } from './rooftoplist/rooftoplist.component';
+
+import { RooftoplistModule } from "./rooftoplist/rooftoplist.module";
 
 
 @NgModule({
@@ -41,13 +44,15 @@ import { UserModifyComponent } from './users/user-modify/user-modify.component';
     HomeComponent,
     UserReadComponent,
     UserModifyComponent
+    //RooftoplistComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     router,
-    NgbModule.forRoot()
+    // NgbModule.forRoot(),
+    RooftoplistModule
   ],
   providers: [
     TagcloudService,

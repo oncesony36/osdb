@@ -10,7 +10,7 @@ export class TagcloudService {
   constructor(private http:Http) { }
 
   getTagCloud() {
-    return this.http.get('http://localhost:8080/board/wordcloud').map(res => res.json());
+    return this.http.get('http://localhost:8090/board/wordcloud').map(res => res.json());
   }
 
 }
