@@ -4,7 +4,7 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { router } from "./app.router";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
-// import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,13 +17,10 @@ import { UserModifyService } from "./users/user-modify/user-modify.service";
 import { UserRegistComponent } from './users/user-regist/user-regist.component';
 import { UserReadComponent } from './users/user-read/user-read.component';
 import { UserModifyComponent } from './users/user-modify/user-modify.component';
-<<<<<<< HEAD
 import { RooftoplistComponent } from './rooftoplist/rooftoplist.component';
 
 import { RooftoplistModule } from "./rooftoplist/rooftoplist.module";
-=======
 import { HomeModule } from "./home/home.module";
->>>>>>> c86266d3238d91cc86a87068d683491545355f0e
 
 
 @NgModule({
@@ -31,27 +28,20 @@ import { HomeModule } from "./home/home.module";
     AppComponent,
     UserRegistComponent,
     UserReadComponent,
-<<<<<<< HEAD
-    UserModifyComponent
-    //RooftoplistComponent
-=======
     UserModifyComponent,
+    //RooftoplistComponent
     HeaderComponent,
     FooterComponent
->>>>>>> c86266d3238d91cc86a87068d683491545355f0e
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     router,
-<<<<<<< HEAD
     // NgbModule.forRoot(),
-    RooftoplistModule
-=======
+    RooftoplistModule,
     NgbModule.forRoot(),
     HomeModule
->>>>>>> c86266d3238d91cc86a87068d683491545355f0e
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
