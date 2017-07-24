@@ -14,48 +14,46 @@ import { TagcloudComponent } from './tagcloud/tagcloud.component';
 import { UserRegistService } from "./users/user-regist/user-regist.service";
 import { UserReadService } from "./users/user-read/user-read.service";
 import { UserModifyService } from "./users/user-modify/user-modify.service";
-import { TagcloudService } from "./tagcloud/tagcloud.service";
-import { CarouselComponent } from './carousel/carousel.component';
-import { RoofCarouselComponent } from './carousel/roof-carousel/roof-carousel.component';
-import { PartyCarouselComponent } from './carousel/party-carousel/party-carousel.component';
-import { CultureCarouselComponent } from './carousel/culture-carousel/culture-carousel.component';
-import { MeetingCarouselComponent } from './carousel/meeting-carousel/meeting-carousel.component';
 import { UserRegistComponent } from './users/user-regist/user-regist.component';
-import { HomeComponent } from './home/home.component';
 import { UserReadComponent } from './users/user-read/user-read.component';
 import { UserModifyComponent } from './users/user-modify/user-modify.component';
+<<<<<<< HEAD
 import { RooftoplistComponent } from './rooftoplist/rooftoplist.component';
 
 import { RooftoplistModule } from "./rooftoplist/rooftoplist.module";
+=======
+import { HomeModule } from "./home/home.module";
+>>>>>>> c86266d3238d91cc86a87068d683491545355f0e
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    TagcloudComponent,
-    CarouselComponent,
-    RoofCarouselComponent,
-    PartyCarouselComponent,
-    CultureCarouselComponent,
-    MeetingCarouselComponent,
     UserRegistComponent,
-    HomeComponent,
     UserReadComponent,
+<<<<<<< HEAD
     UserModifyComponent
     //RooftoplistComponent
+=======
+    UserModifyComponent,
+    HeaderComponent,
+    FooterComponent
+>>>>>>> c86266d3238d91cc86a87068d683491545355f0e
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     router,
+<<<<<<< HEAD
     // NgbModule.forRoot(),
     RooftoplistModule
+=======
+    NgbModule.forRoot(),
+    HomeModule
+>>>>>>> c86266d3238d91cc86a87068d683491545355f0e
   ],
   providers: [
-    TagcloudService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     UserRegistService,
     UserReadService,
