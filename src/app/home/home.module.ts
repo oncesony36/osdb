@@ -16,7 +16,6 @@ import { RoofCarouselComponent } from '../carousel/roof-carousel/roof-carousel.c
 import { PartyCarouselComponent } from '../carousel/party-carousel/party-carousel.component';
 import { CultureCarouselComponent } from '../carousel/culture-carousel/culture-carousel.component';
 import { MeetingCarouselComponent } from '../carousel/meeting-carousel/meeting-carousel.component';
-import { UsersComponent } from '../users/users.component';
 import { UserRegistComponent } from '../users/user-regist/user-regist.component';
 import { HomeComponent } from '../home/home.component';
 
@@ -37,7 +36,6 @@ import { HomeComponent } from '../home/home.component';
     PartyCarouselComponent,
     CultureCarouselComponent,
     MeetingCarouselComponent,
-    UsersComponent,
     UserRegistComponent,
     HomeComponent
   ],
