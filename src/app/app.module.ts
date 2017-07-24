@@ -14,43 +14,30 @@ import { TagcloudComponent } from './tagcloud/tagcloud.component';
 import { UserRegistService } from "./users/user-regist/user-regist.service";
 import { UserReadService } from "./users/user-read/user-read.service";
 import { UserModifyService } from "./users/user-modify/user-modify.service";
-import { TagcloudService } from "./tagcloud/tagcloud.service";
-import { CarouselComponent } from './carousel/carousel.component';
-import { RoofCarouselComponent } from './carousel/roof-carousel/roof-carousel.component';
-import { PartyCarouselComponent } from './carousel/party-carousel/party-carousel.component';
-import { CultureCarouselComponent } from './carousel/culture-carousel/culture-carousel.component';
-import { MeetingCarouselComponent } from './carousel/meeting-carousel/meeting-carousel.component';
 import { UserRegistComponent } from './users/user-regist/user-regist.component';
-import { HomeComponent } from './home/home.component';
 import { UserReadComponent } from './users/user-read/user-read.component';
 import { UserModifyComponent } from './users/user-modify/user-modify.component';
+import { HomeModule } from "./home/home.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    TagcloudComponent,
-    CarouselComponent,
-    RoofCarouselComponent,
-    PartyCarouselComponent,
-    CultureCarouselComponent,
-    MeetingCarouselComponent,
     UserRegistComponent,
-    HomeComponent,
     UserReadComponent,
-    UserModifyComponent
+    UserModifyComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     router,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HomeModule
   ],
   providers: [
-    TagcloudService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     UserRegistService,
     UserReadService,
