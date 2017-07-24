@@ -6,10 +6,7 @@ export class UserModifyService {
 
   constructor(public http: Http) { }
 
-  private modifyUrl: string = "http://localhost:8080/user/modify/"
-
-  postModify(moonUser: any, callback){
-    return this.http.post(this.modifyUrl, moonUser).map((res: Response) => res.json()).subscribe(callback);
+  postModify(moonUser: any, callback, usno){
+    return this.http.post(`http://localhost:8080/user/modify/${usno}`, moonUser).map((res: Response) => res.json()).subscribe(callback);
   }
-
 }

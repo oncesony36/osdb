@@ -1737,3 +1737,10 @@ Footer Section style
     text-decoration: none;
 
 }
+
+/*user section*/
+.regist{
+    background: url(../images/testimg.jpg) no-repeat bottom center;
+    background-size: cover;
+    position: relative;
+}

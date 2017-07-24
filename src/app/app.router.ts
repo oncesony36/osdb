@@ -7,9 +7,8 @@ import { UserModifyComponent } from "./users/user-modify/user-modify.component";
 const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'regist', component: UserRegistComponent},
-    {path: 'read', component: UserReadComponent },
-    {path: 'modify', component: UserModifyComponent }
-
+    {path: 'read/:usno', component: UserReadComponent },
+    {path: 'modify/:usno', component: UserModifyComponent }
 ];
 
 export const router = RouterModule.forRoot(routes);

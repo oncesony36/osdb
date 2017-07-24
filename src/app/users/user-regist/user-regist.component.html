@@ -1,22 +1,41 @@
-<form method="post">
-  <div>
-    <h4>사용자 등록</h4>
+<section class="regist">
+  <div class="overlay"></div>
 
-    <label for="usid">아이디: </label>
-    <input type="text" name="usid" [(ngModel)]="moonUser.usid"><br/>
+<div class="container">
+    <h1 class="well">회원가입</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+				<form>
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<label>아이디</label>
+								<input type="text" name="usid" [(ngModel)]="moonUser.usid" placeholder="아이디" class="form-control"/>
+							</div>
+							<div class="col-sm-12 form-group">
+								<label>패스워드</label>
+								<input type="text" name="uspw" [(ngModel)]="moonUser.uspw" placeholder="패스워드" class="form-control"/>
+							</div>
 
-    <label for="uspw">비밀번호: </label>
-    <input type="text" name="uspw" [(ngModel)]="moonUser.uspw"><br/>
+						<div class="col-sm-12 form-group">
+							<label>닉네임</label>
+							<input type="text" name="usnick" [(ngModel)]="moonUser.usnick" placeholder="닉네임" class="form-control"/>
+						</div>	
 
-    <label for="usnick">닉네임: </label>
-    <input type="text" name="usnick" [(ngModel)]="moonUser.usnick" />
+							<div class="col-sm-12 form-group">
+								<label>이메일</label>
+								<input type="text" name="usmail" [(ngModel)]="moonUser.usmail" placeholder="이메일" class="form-control"/>
+							</div>	
+							<div class="col-sm-12 form-group">
+								<label>전화번호</label>
+								<input type="text" name="ushp" [(ngModel)]="moonUser.ushp" placeholder="전화번호" class="form-control"/>
+							</div>	
 
-    <label for="usmail">이메일: </label>
-    <input type="text" name="usmail" [(ngModel)]="moonUser.usmail" />
-
-    <label for="ushp">연락처: </label>
-    <input type="text" name="ushp" [(ngModel)]="moonUser.ushp" />
-
-    <button type="button" (click)="postRegist()">사용자 등록</button>
+						</div>	
+          <input type="submit" (click)="postRegist()" class="btn btn-lg btn-info" value="등록" />
+					</div>
+				</form> 
+				</div>
+	</div>
   </div>
-</form>
+</section>
