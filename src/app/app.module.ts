@@ -17,10 +17,13 @@ import { UserModifyService } from "./users/user-modify/user-modify.service";
 import { UserRegistComponent } from './users/user-regist/user-regist.component';
 import { UserReadComponent } from './users/user-read/user-read.component';
 import { UserModifyComponent } from './users/user-modify/user-modify.component';
-import { RooftoplistComponent } from './rooftoplist/rooftoplist.component';
 
 import { RooftoplistModule } from "./rooftoplist/rooftoplist.module";
 import { HomeModule } from "./home/home.module";
+
+import { PartylistModule } from "./partylist/partylist.module";
+import { CulturelistModule } from "./culturelist/culturelist.module";
+import { MeetinglistModule } from "./meetinglist/meetinglist.module";
 
 
 @NgModule({
@@ -29,19 +32,21 @@ import { HomeModule } from "./home/home.module";
     UserRegistComponent,
     UserReadComponent,
     UserModifyComponent,
-    //RooftoplistComponent
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     router,
-    // NgbModule.forRoot(),
     RooftoplistModule,
     NgbModule.forRoot(),
-    HomeModule
+    HomeModule,
+    PartylistModule,
+    CulturelistModule,
+    MeetinglistModule
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},

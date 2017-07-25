@@ -22,14 +22,7 @@
                 <div class="carousel-inner">
                     <div class="item active">   
                         <div class="row">
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
-                            </div>
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
-                            </div>
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
+                            <div *ngFor = "let ct of ctlist" class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://localhost:8080/displayFile?fileName={{ct[5]}}" alt="Image" class="img-responsive"></a>
                             </div>
                             
                         </div>
@@ -38,14 +31,7 @@
                     <!--/item-->
                     <div class="item">
                         <div class="row">
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
-                            </div>
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
-                            </div>
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
+                            <div *ngFor = "let ct1 of ctlist1" class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://localhost:8080/displayFile?fileName={{ct1[5]}}" alt="Image" class="img-responsive"></a>
                             </div>
                             
                         </div>
@@ -54,14 +40,7 @@
                     <!--/item-->
                     <div class="item">
                         <div class="row">
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
-                            </div>
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
-                            </div>
-                            <div class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive"></a>
-
+                            <div *ngFor = "let ct2 of ctlist2" class="col-xs-4"><a href="http://www.jquery2dotnet.com/"><img src="http://localhost:8080/displayFile?fileName={{ct2[5]}}" alt="Image" class="img-responsive"></a>
                             </div>
                            
                         </div>
@@ -76,6 +55,6 @@
             <!--/myCarousel-->
         </div>
         <!--/well-->
-        <a class="button_example" href="#">전체보기</a>
+        <a class="button_example" routerLink="/board/ctlist/1" routerLinkActive="active">전체보기</a>
 </div>
 

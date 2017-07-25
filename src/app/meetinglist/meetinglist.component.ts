@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { RooftoplistService } from "./rooftoplist.service";
+import { RooftoplistService } from "../rooftoplist/rooftoplist.service";
 import { ActivatedRoute } from "@angular/router";
 
 import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'app-rooftoplist',
-  templateUrl: './rooftoplist.component.html',
-  styleUrls: ['./rooftoplist.component.css']
+  selector: 'app-meetinglist',
+  templateUrl: './meetinglist.component.html',
+  styleUrls: ['./meetinglist.component.css']
 })
-export class RooftoplistComponent implements OnInit {
+export class MeetinglistComponent implements OnInit {
 
-  private oslist: Array<Object> = [];
+  private mtlist: Array<Object> = [];
   private start: number;
   private end: number;
   private realEnd: number;
@@ -28,7 +28,7 @@ export class RooftoplistComponent implements OnInit {
     return numbers; 
   }
 
-  constructor(private rs: RooftoplistService, private route: ActivatedRoute) { }
+  constructor(private ms: RooftoplistService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     const params = this.route.snapshot.params;
@@ -39,12 +39,12 @@ export class RooftoplistComponent implements OnInit {
   getList(page){
     console.log("clicked");
  
-    this.rs.oslist2(page).subscribe(
+    this.ms.mtlist(page).subscribe(
       
       (data) => {
      
-        this.oslist = data.content;
-        console.log(this.oslist);
+        this.mtlist = data.content;
+        console.log(this.mtlist);
             
         this.end = Math.ceil((data.number+1 ) / data.size) * data.size;
       

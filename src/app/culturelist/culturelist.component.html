@@ -1,0 +1,52 @@
+
+<div class="container">
+  <!-- <div id="products" class="row list-group"> -->
+ <div id="products" class="row list-group">
+    <div *ngFor = "let board of ctlist" class='item  col-xs-4 col-lg-4'>{{board[0]}}
+      <div class='thumbnail'>
+        <img class='group list-group-image' src='http://localhost:8080/displayFile?fileName={{board[5]}}' alt='' />
+        <div class='caption'>
+          <h4 class='group inner list-group-item-heading'>{{board[1]}}</h4>
+          <p class='group inner list-group-item-text'>{{board[4]}}</p>
+          <div class='row'><div class='col-xs-12 col-md-6'>
+            <p class='lead'>{{board[3]}}원</p>
+          </div>
+          <div class='col-xs-12 col-md-6'> 
+            <a class='btn btn-success' href='http://www.jquery2dotnet.com'>Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+<div class = "text-center mt50">
+		<nav aria-label="Page navigation example">
+		<ul class="pagination pagination-lg clearfix">
+	        
+	        	<li class="page-item" *ngIf="prev">
+	        		<a class="page-link" routerLink="/board/ctlist/{{start-1}}" routerLinkActive="active" (click) = getList(start-2)>«</a>
+					<!-- <a class="page-link" href="/board/listPage/page/{{start-1}}"(click) = getList(start-2)>«</a> -->
+	        	</li>
+	        
+	        
+	        
+	        	<li class="page-item" *ngFor = "let page of range(start, end)">
+	        		<a class="page-link" routerLink="/board/ctlist/{{page}}" routerLinkActive="active" (click) = getList(page-1)>{{page}}</a>
+				<!-- <a class="page-link" href="/board/listPage/page/{{page}}"(click) = getList(start-2)>{{page}}</a> -->
+	        	</li>
+	        
+	        
+	        
+	        	<li class="page-item" *ngIf = "next">
+	        		<a class="page-link" routerLink="/board/ctlist/{{end+1}}" routerLinkActive="active" (click) = getList(end)>»</a>
+           
+               <!-- <a class="page-link" href="/board/listPage/page/{{end+1}}" (click) = getList(end)>»</a> -->
+					
+	        	</li>
+	       
+      </ul>
+		</nav>
+		<a routerLink="/board/regist" routerLinkActive="active"><button type="submit" class="btn btn-info">등록</button></a>
+      </div>
+</div>

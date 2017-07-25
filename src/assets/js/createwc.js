@@ -1,8 +1,8 @@
 var tlist = [];
                 $.getJSON("http://192.168.0.36:8090/board/wordcloud", function(hlist){
-            console.log("start ccc");
+           // console.log("start ccc");
                     $(hlist).each(function(index){
-                        console.log(hlist[index][0]);
+                        //console.log(hlist[index][0]);
                         tlist.push([hlist[index][0].slice(1), hlist[index][1]])
                         //console.log(hlist[index]["text"].split("#"));
                         //console.log(hlist[index]["text"].slice(1));
@@ -35,11 +35,11 @@ var tlist = [];
                     // + "&keyword="
                     // + realTag;
                     console.log("clicked");
-                        console.log(realTag);
+                        //console.log(realTag);
                 } else {
                     document.getElementById("details").innerText = "";
                 }
                 }
                 document.getElementById("cloud").addEventListener("click", clicked)
-                console.log(document.getElementById("cloud")+"dddd");
-                console.log(document.getElementById("details")+"dddd");
+                //console.log(document.getElementById("cloud")+"dddd");
+                //console.log(document.getElementById("details")+"dddd");
